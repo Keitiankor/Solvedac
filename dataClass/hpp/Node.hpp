@@ -14,4 +14,4 @@ template<typename T> class Node {
 	Node* getBefore();
 };
 
-#include "../tpp/Node.tpp"
+#include "Node.tpp"

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../hpp/Node.hpp"
+#include "Node.hpp"
 
 template<typename T> class Deque {
 	private:
@@ -21,4 +21,4 @@ template<typename T> class Deque {
 	int size();
 };
 
-#include "../tpp/Deque.tpp"
+#include "Deque.tpp"

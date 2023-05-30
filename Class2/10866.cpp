@@ -6,7 +6,6 @@
 
 using namespace std;
 
-vector<string> split(string s, char delimiter);
 void command(string s);
 void command(string s, int i);
 
@@ -32,7 +31,6 @@ int main() {
 	init();
 
 	int line;
-
 	cin >> line;
 
 	for(int i = 0; i < line; i++) {

@@ -1,4 +1,4 @@
-#include "../hpp/Node.hpp"
+#include "Node.hpp"
 
 template<typename T> Node<T>::Node(T data) {
 	this->front	 = nullptr;
