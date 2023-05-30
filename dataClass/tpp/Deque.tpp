@@ -1,4 +1,4 @@
-#include "Deque.hpp"
+#include "../hpp/Deque.hpp"
 
 template<typename T> Deque<T>::Deque() {
 	this->head	 = nullptr;

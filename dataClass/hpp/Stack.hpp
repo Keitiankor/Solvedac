@@ -16,4 +16,4 @@ template<typename T> class Stack {
 	T back();
 };
 
-#include "Stack.tpp"
+#include "../tpp/Stack.tpp"

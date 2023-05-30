@@ -19,4 +19,4 @@ template<typename T> class Queue {
 	T back();
 };
 
-#include "Queue.tpp"
+#include "../tpp/Queue.tpp"

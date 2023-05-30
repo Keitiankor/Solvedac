@@ -1,4 +1,4 @@
-#include "Stack.hpp"
+#include "../hpp/Stack.hpp"
 
 template<typename T> void Stack<T>::init(Node<T>* node) {
 	this->head	 = node;

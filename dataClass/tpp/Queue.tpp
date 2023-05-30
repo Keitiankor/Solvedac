@@ -1,4 +1,4 @@
-#include "Queue.hpp"
+#include "../hpp/Queue.hpp"
 
 template<typename T> Queue<T>::Queue() {
 	this->head	 = nullptr;

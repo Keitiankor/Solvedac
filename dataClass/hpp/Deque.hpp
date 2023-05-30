@@ -21,4 +21,4 @@ template<typename T> class Deque {
 	int size();
 };
 
-#include "Deque.tpp"
+#include "../tpp/Deque.tpp"
