@@ -16,7 +16,8 @@ int main() {
     cin >> length;
     int* squence = new int[length];
 
-    for(int i = 0; i < length; i++) cin >> squence[i];
+    for (int i = 0; i < length; i++)
+        cin >> squence[i];
 
     /****************
      * initializing *
@@ -27,21 +28,23 @@ int main() {
     n++;
 
     // While Stack is not empty //
-    while(q.size() > 0) {
+    while (q.size() > 0) {
         // While Stack's top is same with input Squence
-        while(!q.empty() && q.top() == squence[k]) {
+        while (!q.empty() && q.top() == squence[k]) {
             q.pop();
             ss << "-\n";
             k++;
         }
-        // Stack's top is not same with input Squence and stack size is shotter than squence length
-        if(n <= length) {
+        // Stack's top is not same with input Squence and stack size is shotter
+        // than squence length
+        if (n <= length) {
             q.push(n);
             n++;
             ss << "+\n";
         }
-        // Stack's top is not same with input Squence and stack is longer than squence length
-        if(!q.empty() && q.top() != squence[k] && n > length) {
+        // Stack's top is not same with input Squence and stack is longer than
+        // squence length
+        if (!q.empty() && q.top() != squence[k] && n > length) {
             cout << "NO";
             return 0;
         }

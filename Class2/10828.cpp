@@ -28,10 +28,10 @@ int main() {
     int line;
     cin >> line;
 
-    for(int i = 0; i < line; i++) {
+    for (int i = 0; i < line; i++) {
         string s;
         cin >> s;
-        switch(m[s]) {
+        switch (m[s]) {
         case PUSH:
             int a;
             cin >> a;
@@ -51,9 +51,9 @@ void command(int a) {
 }
 
 void command(string s) {
-    switch(m[s]) {
+    switch (m[s]) {
     case POP:
-        if(st.empty())
+        if (st.empty())
             cout << -1 << '\n';
         else {
             cout << st.top() << '\n';
@@ -64,13 +64,13 @@ void command(string s) {
         cout << st.size() << '\n';
         break;
     case EMPTY:
-        if(st.empty())
+        if (st.empty())
             cout << 1 << '\n';
         else
             cout << 0 << '\n';
         break;
     case TOP:
-        if(st.empty())
+        if (st.empty())
             cout << -1 << '\n';
         else
             cout << st.top() << '\n';

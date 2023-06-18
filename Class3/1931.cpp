@@ -13,7 +13,7 @@ int main() {
     int n;
     cin >> n;
     vector<pair<int, int>> timetable;
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         int a, b;
         cin >> a >> b;
         timetable.push_back(make_pair(a, b));
@@ -25,8 +25,8 @@ int main() {
 
     int time    = timetable[0].second;
     int counter = 1;
-    for(int index = 1; index < n; index++)
-        if(timetable[index].first >= time) {
+    for (int index = 1; index < n; index++)
+        if (timetable[index].first >= time) {
             time = timetable[index].second;
             counter++;
         }

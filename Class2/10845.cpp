@@ -29,10 +29,10 @@ int main() {
     int line;
     cin >> line;
 
-    for(int i = 0; i < line; i++) {
+    for (int i = 0; i < line; i++) {
         string s;
         cin >> s;
-        switch(m[s]) {
+        switch (m[s]) {
         case PUSH:
             int a;
             cin >> a;
@@ -52,9 +52,9 @@ void command(int a) {
 }
 
 void command(string s) {
-    switch(m[s]) {
+    switch (m[s]) {
     case POP:
-        if(q.empty())
+        if (q.empty())
             cout << -1 << '\n';
         else {
             cout << q.front() << '\n';
@@ -65,19 +65,19 @@ void command(string s) {
         cout << q.size() << '\n';
         break;
     case EMPTY:
-        if(q.empty())
+        if (q.empty())
             cout << 1 << '\n';
         else
             cout << 0 << '\n';
         break;
     case FRONT:
-        if(q.empty())
+        if (q.empty())
             cout << -1 << '\n';
         else
             cout << q.front() << '\n';
         break;
     case BACK:
-        if(q.empty())
+        if (q.empty())
             cout << -1 << '\n';
         else
             cout << q.back() << '\n';

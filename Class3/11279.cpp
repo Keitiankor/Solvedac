@@ -29,16 +29,16 @@ int main() {
 
     multiset<int> maxHeap;
 
-    for(int i = 0; i < lines; i++) {
+    for (int i = 0; i < lines; i++) {
         int t;
         cin >> t;
-        if(t != 0)
+        if (t != 0)
             maxHeap.insert(t);
         else {
 #ifndef NDEBUG
             cout << "ans : ";
 #endif
-            if(maxHeap.empty())
+            if (maxHeap.empty())
                 cout << 0 << '\n';
             else {
                 cout << *maxHeap.rbegin() << '\n';

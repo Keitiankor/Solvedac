@@ -32,12 +32,14 @@ int main() {
     istringstream iss(s);
     vector<string> vs1;
     string temp;
-    while(getline(iss, temp, '-')) vs1.push_back(temp);
+    while (getline(iss, temp, '-'))
+        vs1.push_back(temp);
 
-    for(int i = 0; i < vs1.size(); i++) {
+    for (int i = 0; i < vs1.size(); i++) {
         int t = 0;
         istringstream iss(vs1[i]);
-        while(getline(iss, temp, '+')) t += stoi(temp);
+        while (getline(iss, temp, '+'))
+            t += stoi(temp);
         ans += i == 0 ? t : -t;
     }
 

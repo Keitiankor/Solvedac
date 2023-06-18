@@ -10,14 +10,15 @@ int main() {
     cin >> n;
     vector<int> arr(n);
 
-    for(int i = 0; i < n; i++) cin >> arr[i];
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
 
     sort(arr.begin(), arr.end());
     cin >> n;
 
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         cin >> temp;
-        if(binary_search(arr.begin(), arr.end(), temp))
+        if (binary_search(arr.begin(), arr.end(), temp))
             cout << 1 << '\n';
         else
             cout << 0 << '\n';

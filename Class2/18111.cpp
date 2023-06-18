@@ -14,7 +14,7 @@ int main() {
     int n, m, b;
     cin >> n >> m >> b;
 
-    for(int i = 0; i < n * m; i++) {
+    for (int i = 0; i < n * m; i++) {
         int temp;
         cin >> temp;
         landscape.push_back(temp);
@@ -27,18 +27,18 @@ int main() {
     int ans = 2100000000;
     int height;
 
-    while(true) {
+    while (true) {
         bool isValid = false;
         int fill     = 0;
         int cut      = 0;
-        for(int i = 0; i < n * m; i++) {
-            if(landscape[i] < low) fill += low - landscape[i];
-            if(landscape[i] > low) cut += landscape[i] - low;
+        for (int i = 0; i < n * m; i++) {
+            if (landscape[i] < low) fill += low - landscape[i];
+            if (landscape[i] > low) cut += landscape[i] - low;
         }
-        if((b + cut) - fill >= 0) isValid = true;
-        if(isValid) {
+        if ((b + cut) - fill >= 0) isValid = true;
+        if (isValid) {
             int time = fill + cut * 2;
-            if(ans >= time) {
+            if (ans >= time) {
                 ans    = time;
                 height = low;
                 low++;

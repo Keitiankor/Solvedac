@@ -12,14 +12,14 @@ int main() {
 
     int n;
     cin >> n;
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         int t;
         cin >> t;
-        if(t != 0) {
+        if (t != 0) {
             minheap.insert(t);
         } else {
             auto iter = minheap.begin();
-            if(minheap.empty())
+            if (minheap.empty())
                 cout << 0 << '\n';
             else {
                 cout << *iter << '\n';

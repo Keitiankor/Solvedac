@@ -6,6 +6,8 @@ int main() {
     int sum = 0;
     cin >> n;
     cin >> s;
-    for(int i = 0; i < n; i++) { sum += s.at(i) - '0'; }
+    for (int i = 0; i < n; i++) {
+        sum += s.at(i) - '0';
+    }
     cout << sum;
 }

@@ -34,10 +34,10 @@ int main() {
     int M;
     cin >> M;
 
-    for(int i = 0; i < M; i++) {
+    for (int i = 0; i < M; i++) {
         string s;
         cin >> s;
-        switch(m[s]) {
+        switch (m[s]) {
         case ALL:
             fill_n(bs, 21, true);
             break;
@@ -47,7 +47,7 @@ int main() {
         default:
             int t;
             cin >> t;
-            switch(m[s]) {
+            switch (m[s]) {
             case ADD:
                 bs[t] = true;
                 break;

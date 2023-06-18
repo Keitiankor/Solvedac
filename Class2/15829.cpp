@@ -18,10 +18,11 @@ int main() {
     string s;
     cin >> s;
 
-    for(int i = 0; i < l; i++) {
+    for (int i = 0; i < l; i++) {
         long temp = s[i] - 'a' + 1;
         long ri   = 1;
-        for(int j = 0; j < i; j++) ri = (ri * r) % m;
+        for (int j = 0; j < i; j++)
+            ri = (ri * r) % m;
         hash += (long long)temp * ri;
         hash %= m;
     }

@@ -35,7 +35,7 @@ int main() {
 
     char** tomatos = new char*[n];
     bool** checker = new bool*[n];
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         tomatos[i] = new char[m];
         checker[i] = new bool[m];
         fill_n(&checker[i][0], m, false);
@@ -44,32 +44,32 @@ int main() {
     queue<pii> tomato;
     pii grow[4] = {{1, 0}, {-1, 0}, {0, -1}, {0, 1}};
 
-    for(int i = 0; i < n; i++)
-        for(int j = 0; j < m; j++) {
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++) {
             int t;
             cin >> t;
             tomatos[i][j] = t;
-            if(t == -1) checker[i][j] = true;
-            if(t == 1) {
+            if (t == -1) checker[i][j] = true;
+            if (t == 1) {
                 checker[i][j] = true;
                 tomato.push(make_pair(i, j));
             }
         }
     int days = 0;
     tomato.push({-1, -1});
-    while(!tomato.empty()) {
+    while (!tomato.empty()) {
         pii growth = tomato.front();
         tomato.pop();
-        if(growth == make_pair(-1, -1)) {
-            if(tomato.empty()) break;
+        if (growth == make_pair(-1, -1)) {
+            if (tomato.empty()) break;
             tomato.push({-1, -1});
             days++;
         } else {
-            for(int i = 0; i < 4; i++) {
+            for (int i = 0; i < 4; i++) {
                 pii t = growth + grow[i];
-                if(t.in(n, m) && !checker[t.first][t.second]) {
+                if (t.in(n, m) && !checker[t.first][t.second]) {
                     checker[t.first][t.second] = true;
-                    if(tomatos[t.first][t.second] == 0) {
+                    if (tomatos[t.first][t.second] == 0) {
                         tomatos[t.first][t.second] = 1;
                         tomato.push(t);
                     }
@@ -77,9 +77,9 @@ int main() {
             }
         }
     }
-    for(int i = 0; i < n; i++)
-        for(int j = 0; j < m; j++)
-            if(!checker[i][j]) days = -1;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            if (!checker[i][j]) days = -1;
 
     cout << days;
 

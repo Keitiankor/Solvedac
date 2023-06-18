@@ -10,8 +10,8 @@ int main() {
     cin >> a >> b;
 
     int min = 1, max = 1;
-    for(int i = 2; i <= a || i <= b; i++) {
-        if(a % i == 0 && b % i == 0) {
+    for (int i = 2; i <= a || i <= b; i++) {
+        if (a % i == 0 && b % i == 0) {
             min *= i;
             a /= i;
             b /= i;

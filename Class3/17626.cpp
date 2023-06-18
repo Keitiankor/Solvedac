@@ -28,15 +28,17 @@ int main() {
     fill_n(lagrange, 50001, 5);
 
     int multmap[224];
-    for(int i = 0; i < 225; i++) multmap[i] = i * i;
-    for(auto i : multmap) lagrange[i] = 1;
+    for (int i = 0; i < 225; i++)
+        multmap[i] = i * i;
+    for (auto i : multmap)
+        lagrange[i] = 1;
 
     int counter = 0;
     int multtimes;
-    for(int i = 2; i < 50001; i++) {
-        if(lagrange[i] != 1) {
-            for(int j = 1; j < i / 2 + 1; j++) {
-                if(lagrange[j] + lagrange[i - j] < lagrange[i]) lagrange[i] = lagrange[j] + lagrange[i - j];
+    for (int i = 2; i < 50001; i++) {
+        if (lagrange[i] != 1) {
+            for (int j = 1; j < i / 2 + 1; j++) {
+                if (lagrange[j] + lagrange[i - j] < lagrange[i]) lagrange[i] = lagrange[j] + lagrange[i - j];
             }
         }
     }

@@ -11,12 +11,12 @@ int main() {
     cin >> n >> m;
     int* sum = new int[n + 1];
     sum[0]   = 0;
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         int t;
         cin >> t;
         sum[i + 1] = sum[i] + t;
     }
-    for(int i = 0; i < m; i++) {
+    for (int i = 0; i < m; i++) {
         int a, b;
         cin >> a >> b;
         cout << sum[b] - sum[a - 1] << '\n';

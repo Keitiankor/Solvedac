@@ -11,7 +11,7 @@ int main() {
     int k, n;
     cin >> k >> n;
     vector<int> lan;
-    for(int i = 0; i < k; i++) {
+    for (int i = 0; i < k; i++) {
         int temp;
         cin >> temp;
         lan.push_back(temp);
@@ -19,14 +19,16 @@ int main() {
     long min = 0;
     long max = 2147483647;
     long ans = 0;
-    while(min <= max) {
+    while (min <= max) {
         long mid   = (min + max) / 2;
         long count = 0;
-        for(int i = 0; i < k; i++) { count += lan[i] / mid; }
-        if(count < n)
+        for (int i = 0; i < k; i++) {
+            count += lan[i] / mid;
+        }
+        if (count < n)
             max = mid - 1;
         else {
-            if(ans < mid) ans = mid;
+            if (ans < mid) ans = mid;
             min = mid + 1;
         }
     }

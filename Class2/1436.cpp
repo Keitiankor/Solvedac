@@ -14,10 +14,10 @@ int main() {
 
     int count = 0;
     int eow   = 665;
-    while(count != n) {
+    while (count != n) {
         eow++;
         string s = to_string(eow);
-        if(s.find(sss) != string::npos) count++;
+        if (s.find(sss) != string::npos) count++;
     }
     cout << eow;
 
