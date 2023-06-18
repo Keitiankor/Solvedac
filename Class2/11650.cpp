@@ -14,7 +14,7 @@ int main() {
         point.push_back(make_pair(x, y));
     }
 
-    sort(point.begin(), point.end(), [](pair<int, int>& p1, pair<int, int>& p2) {
+    sort(point.begin(), point.end(), [](pair<int, int> &p1, pair<int, int> &p2) {
         return p1.first == p2.first ? (p1.second < p2.second ? true : false) : (p1.first < p2.first ? true : false);
     });
 

@@ -5,7 +5,7 @@ int main() {
     int min = 1000001;
     int max = -1000001;
     cin >> n;
-    int* l = new int[n];
+    int *l = new int[n];
     for (int i = 0; i < n; i++) {
         cin >> l[i];
         if (l[i] < min) min = l[i];

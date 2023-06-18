@@ -28,7 +28,7 @@ int main() {
     cin >> n >> m >> v;
 
     vector<pair<int, int>> graph;
-    bool* visited = new bool[n + 1];
+    bool *visited = new bool[n + 1];
     fill_n(visited, n + 1, false);
     for (int i = 0; i < m; i++) {
         int x, y;

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int check(bool* paper, int w, int b, int size);
+int check(bool *paper, int w, int b, int size);
 
 int main() {
     ios::sync_with_stdio(false);
@@ -11,8 +11,8 @@ int main() {
 
     int n;
     cin >> n;
-    bool* paper = new bool[n * n];
-    bool* check = new bool[n * n];
+    bool *paper = new bool[n * n];
+    bool *check = new bool[n * n];
     for (int i; i < n * n; i++) {
         int t;
         cin >> t;

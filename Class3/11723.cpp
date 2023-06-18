@@ -28,7 +28,7 @@ int main() {
     cin.tie(NULL);
     cout.tie(NULL);
     init();
-    bool* bs = new bool[21];
+    bool *bs = new bool[21];
     fill_n(bs, 21, false);
 
     int M;

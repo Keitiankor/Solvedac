@@ -20,7 +20,7 @@ int main() {
         pr.push_back(make_tuple(i + 1, year, name));
     }
 
-    sort(pr.begin(), pr.end(), [](tuple<int, int, string>& p1, tuple<int, int, string>& p2) {
+    sort(pr.begin(), pr.end(), [](tuple<int, int, string> &p1, tuple<int, int, string> &p2) {
         return get<1>(p1) == get<1>(p2) ? get<0>(p1) < get<0>(p2) ? true : false :
                get<1>(p1) < get<1>(p2)  ? true :
                                           false;

@@ -26,12 +26,12 @@ int main() {
 
     int n;
     cin >> n;
-    int* stairs = new int[n];
+    int *stairs = new int[n];
     for (int i = 0; i < n; i++)
         cin >> stairs[i];
 
-    int* score  = new int[n];
-    int* scored = new int[n];
+    int *score  = new int[n];
+    int *scored = new int[n];
     for (int i = 0; i < n; i++) {
         switch (i) {
         case 0:

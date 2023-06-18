@@ -5,7 +5,7 @@ int main() {
     cin >> m;
     float max    = 0;
     float sum    = 0;
-    float* score = new float[m];
+    float *score = new float[m];
     for (int i = 0; i < m; i++) {
         cin >> score[i];
         if (score[i] > max) max = score[i];

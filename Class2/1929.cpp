@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     int n, m;
     cin >> m >> n;
-    bool* prime = new bool[n + 1];
+    bool *prime = new bool[n + 1];
     fill_n(prime, n + 1, false);
 
     for (int i = 2; i <= n; i++) {

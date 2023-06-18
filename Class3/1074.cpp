@@ -10,8 +10,8 @@ int main() {
 
     int n, c, r;
     cin >> n >> r >> c;
-    bool* y = new bool[n];
-    bool* x = new bool[n];
+    bool *y = new bool[n];
+    bool *x = new bool[n];
 
     for (int i = 1; i <= n; i++) {
         int t    = pow(2, n - i);

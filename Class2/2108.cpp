@@ -26,14 +26,14 @@ int main() {
     vector<pair<int, int>> frequency;
     stack<int> q;
     for (auto i : arr) {
-        auto iter = find_if(frequency.begin(), frequency.end(), [i](const pair<int, int>& e) { return e.first == i; });
+        auto iter = find_if(frequency.begin(), frequency.end(), [i](const pair<int, int> &e) { return e.first == i; });
         if (iter != frequency.end())
             iter->second++;
         else
             frequency.push_back(make_pair(i, 1));
     }
     int maxf = 0;
-    for (const auto& [key, value] : frequency) {
+    for (const auto &[key, value] : frequency) {
         if (value > maxf) {
             maxf = value;
             while (!q.empty())

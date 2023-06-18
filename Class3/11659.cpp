@@ -9,7 +9,7 @@ int main() {
 
     int n, m;
     cin >> n >> m;
-    int* sum = new int[n + 1];
+    int *sum = new int[n + 1];
     sum[0]   = 0;
     for (int i = 0; i < n; i++) {
         int t;

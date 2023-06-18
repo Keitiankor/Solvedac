@@ -4,7 +4,7 @@
 int main() {
     int n;
     scanf("%d", &n);
-    int* numbers = new int[10001];
+    int *numbers = new int[10001];
     std::fill_n(numbers, 10001, 0);
     for (int i = 0; i < n; i++) {
         int s;

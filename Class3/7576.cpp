@@ -21,8 +21,8 @@ class pii : public pair<int, int> {
         this->first  = p.first;
         this->second = p.second;
     }
-    pii operator+(const pii& p) { return make_pair(this->first + p.first, this->second + p.second); }
-    bool operator!=(const pii& p) { return this->first != p.first || this->second != p.second ? false : true; }
+    pii operator+(const pii &p) { return make_pair(this->first + p.first, this->second + p.second); }
+    bool operator!=(const pii &p) { return this->first != p.first || this->second != p.second ? false : true; }
 };
 
 int main() {
@@ -33,8 +33,8 @@ int main() {
     int m, n;
     cin >> m >> n;
 
-    char** tomatos = new char*[n];
-    bool** checker = new bool*[n];
+    char **tomatos = new char *[n];
+    bool **checker = new bool *[n];
     for (int i = 0; i < n; i++) {
         tomatos[i] = new char[m];
         checker[i] = new bool[m];

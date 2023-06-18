@@ -14,7 +14,7 @@ int main() {
     int length, k, n;
 
     cin >> length;
-    int* squence = new int[length];
+    int *squence = new int[length];
 
     for (int i = 0; i < length; i++)
         cin >> squence[i];

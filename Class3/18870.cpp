@@ -14,7 +14,7 @@ int main() {
     cin >> n;
 
     set<int> x;
-    int* arr = new int[n];
+    int *arr = new int[n];
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
         x.insert(arr[i]);
