@@ -7,8 +7,8 @@ int main() {
     int mult      = a * b * c;
     int count[10] = {0};
     string s      = to_string(mult);
-    for (int i = 0; i < s.length(); i++)
+    for(int i = 0; i < s.length(); i++)
         count[s.at(i) - '0']++;
-    for (int i = 0; i < 10; i++)
+    for(int i = 0; i < 10; i++)
         cout << count[i] << '\n';
 }

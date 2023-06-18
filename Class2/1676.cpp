@@ -13,14 +13,14 @@ int main() {
     int n;
     cin >> n;
 
-    for (int i = 1; i <= n; i++) {
+    for(int i = 1; i <= n; i++) {
         int temp = i;
 
-        while (temp % 2 == 0) {
+        while(temp % 2 == 0) {
             temp = temp / 2;
             countof2++;
         }
-        while (temp % 5 == 0) {
+        while(temp % 5 == 0) {
             temp = temp / 5;
             countof5++;
         }

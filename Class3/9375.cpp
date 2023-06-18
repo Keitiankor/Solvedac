@@ -26,23 +26,23 @@ int main() {
 
     int tc;
     cin >> tc;
-    for (int i = 0; i < tc; i++) {
+    for(int i = 0; i < tc; i++) {
         map<string, int> cloths;
         int c;
         cin >> c;
-        for (int j = 0; j < c; j++) {
+        for(int j = 0; j < c; j++) {
             string n, t;
             cin >> n >> t;
-            if (!cloths.count(t))
+            if(!cloths.count(t))
                 cloths.emplace(t, 1);
             else
                 cloths.find(t)->second++;
         }
         vector<int> setup;
-        for (auto i : cloths)
+        for(auto i : cloths)
             setup.push_back(i.second);
         int count = 1;
-        for (auto i : setup)
+        for(auto i : setup)
             count *= i + 1;
         cout << count - 1 << '\n';
     }

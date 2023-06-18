@@ -16,7 +16,7 @@ int main() {
     vector<bool> isInfected(computers + 1, false);
     vector<pair<int, int>> connection;
 
-    for (int i = 0; i < connections; i++) {
+    for(int i = 0; i < connections; i++) {
         int from, to;
         cin >> from >> to;
         connection.push_back(make_pair(from, to));
@@ -27,16 +27,16 @@ int main() {
     infectionPool.push(1);
 
     int ans = 0;
-    while (!infectionPool.empty()) {
+    while(!infectionPool.empty()) {
         int from = infectionPool.front();
         infectionPool.pop();
-        for (int i = 0; i < connection.size(); i++) {
-            if (connection[i].first == from && isInfected[connection[i].second] == false) {
+        for(int i = 0; i < connection.size(); i++) {
+            if(connection[i].first == from && isInfected[connection[i].second] == false) {
                 isInfected[connection[i].second] = true;
                 infectionPool.push(connection[i].second);
                 ans++;
             }
-            if (connection[i].second == from && isInfected[connection[i].first] == false) {
+            if(connection[i].second == from && isInfected[connection[i].first] == false) {
                 isInfected[connection[i].first] = true;
                 infectionPool.push(connection[i].first);
                 ans++;

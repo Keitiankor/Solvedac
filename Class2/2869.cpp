@@ -12,7 +12,8 @@ int main() {
 
     int height = v - a;
     int days   = height / (a - b);
-    if (height % (a - b) != 0) days++;
+    if(height % (a - b) != 0)
+        days++;
     days++;
 
     cout << days;

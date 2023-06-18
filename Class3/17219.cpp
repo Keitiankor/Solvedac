@@ -27,13 +27,13 @@ int main() {
     unordered_map<string, string> mapss;
     int n, m;
     cin >> n >> m;
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         string url, pass;
         cin >> url >> pass;
         pair<string, string> tp = make_pair(url, pass);
         mapss.emplace(url, pass);
     }
-    for (int i = 0; i < m; i++) {
+    for(int i = 0; i < m; i++) {
         string url;
         cin >> url;
         cout << mapss.find(url)->second << '\n';

@@ -13,12 +13,12 @@ int main() {
     int n, k;
     cin >> n >> k;
 
-    if (n == k) {
+    if(n == k) {
         cout << 0;
         return 0;
     }
 
-    if (n > k) {
+    if(n > k) {
         cout << n - k;
         return 0;
     }
@@ -30,21 +30,22 @@ int main() {
     trace.push(n);
     isVisited[n] = true;
     trace.push(-1);
-    while (true) {
-        if (trace.front() == k) break;
-        if (trace.front() == -1) {
+    while(true) {
+        if(trace.front() == k)
+            break;
+        if(trace.front() == -1) {
             count++;
             trace.push(-1);
         } else {
-            if (trace.front() * 2 < MAX && !isVisited[trace.front() * 2]) {
+            if(trace.front() * 2 < MAX && !isVisited[trace.front() * 2]) {
                 trace.push(trace.front() * 2);
                 isVisited[trace.front() * 2] = true;
             }
-            if (!isVisited[trace.front() + 1] && trace.front() + 1 < MAX) {
+            if(!isVisited[trace.front() + 1] && trace.front() + 1 < MAX) {
                 isVisited[trace.front() + 1] = true;
                 trace.push(trace.front() + 1);
             }
-            if (!isVisited[trace.front() - 1] && trace.front() - 1 >= 0) {
+            if(!isVisited[trace.front() - 1] && trace.front() - 1 >= 0) {
                 isVisited[trace.front() - 1] = true;
                 trace.push(trace.front() - 1);
             }

@@ -41,10 +41,10 @@ int main() {
     vector<pair<int, int>> _moveAble = vInit();
     queue<pair<int, int>> _point;
 
-    char** _map = new char*[n];
+    char **_map = new char *[n];
     for(int i = 0; i < n; i++)
         _map[i] = new char[m];
-    bool** _visited = new bool*[n];
+    bool **_visited = new bool *[n];
     for(int i = 0; i < n; i++) {
         _visited[i] = new bool[m];
         fill_n(_visited[i], m, false);

@@ -10,16 +10,16 @@ int main() {
 
     int line;
     cin >> line;
-    for (int i = 0; i < line; i++) {
+    for(int i = 0; i < line; i++) {
         string s;
         stack<char> stk;
         bool isVPS = true;
         cin >> s;
-        for (char i : s) {
-            if (i == '(')
+        for(char i : s) {
+            if(i == '(')
                 stk.push(i);
             else {
-                if (!stk.empty() && stk.top() == '(')
+                if(!stk.empty() && stk.top() == '(')
                     stk.pop();
                 else {
                     isVPS = false;
@@ -27,8 +27,9 @@ int main() {
                 }
             }
         }
-        if (!stk.empty()) isVPS = false;
-        if (isVPS)
+        if(!stk.empty())
+            isVPS = false;
+        if(isVPS)
             cout << "YES\n";
         else
             cout << "NO\n";

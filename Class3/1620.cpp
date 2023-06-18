@@ -25,16 +25,16 @@ int main() {
     cin >> n >> m;
     doubleKeySet dks;
 
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         string s;
         cin >> s;
         dks.addSet(i + 1, s);
     }
 
-    for (int i = 0; i < m; i++) {
+    for(int i = 0; i < m; i++) {
         string s;
         cin >> s;
-        if (s[0] >= '0' && s[0] <= '9') {
+        if(s[0] >= '0' && s[0] <= '9') {
             int sti = stoi(s);
             cout << dks.findWInt(sti) << '\n';
         } else {

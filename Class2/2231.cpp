@@ -12,18 +12,18 @@ int main() {
     cin >> n;
 
     int m = 0;
-    if (n == 1) {
+    if(n == 1) {
         cout << 0;
         return 0;
     }
-    while (m <= n) {
+    while(m <= n) {
         m++;
         string s = to_string(m);
         vector<int> v;
         int sum = m;
-        for (char c : s)
+        for(char c : s)
             sum += c - '0';
-        if (sum == n) {
+        if(sum == n) {
             cout << m;
             return 0;
         }

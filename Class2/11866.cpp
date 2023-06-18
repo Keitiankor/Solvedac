@@ -11,17 +11,18 @@ int main() {
     cin >> n >> k;
     queue<int> q;
     int counter = 1;
-    for (int i = 1; i <= n; i++)
+    for(int i = 1; i <= n; i++)
         q.push(i);
 
     cout << "<";
 
-    while (!q.empty()) {
-        if (counter == k) {
+    while(!q.empty()) {
+        if(counter == k) {
             cout << q.front();
             q.pop();
             counter = 0;
-            if (!q.empty()) cout << ", ";
+            if(!q.empty())
+                cout << ", ";
         } else {
             q.push(q.front());
             q.pop();

@@ -11,14 +11,14 @@ int main() {
     vector<int> fibo0(41);
     vector<int> fibo1(41);
 
-    for (int i = 0; i < 41; i++) {
-        if (i == 0) {
+    for(int i = 0; i < 41; i++) {
+        if(i == 0) {
             fibo0[i] = 1;
             fibo1[i] = 0;
-        } else if (i == 1) {
+        } else if(i == 1) {
             fibo0[i] = 0;
             fibo1[i] = 1;
-        } else if (i == 2) {
+        } else if(i == 2) {
             fibo0[i] = 1;
             fibo1[i] = 1;
         } else {
@@ -29,7 +29,7 @@ int main() {
     int t;
     cin >> t;
 
-    for (int i = 0; i < t; i++) {
+    for(int i = 0; i < t; i++) {
         int in;
         cin >> in;
         cout << fibo0[in] << " " << fibo1[in] << '\n';

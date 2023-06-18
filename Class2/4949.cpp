@@ -10,34 +10,37 @@ int main() {
 
     string s = " ";
 
-    while (true) {
+    while(true) {
         bool flag = true;
         stack<char> brackets;
         getline(cin, s);
-        if (s == ".") break;
+        if(s == ".")
+            break;
 
-        for (int i = 0; s[i] != '.'; i++) {
-            if (s[i] == '(' || s[i] == '[') brackets.push(s[i]);
+        for(int i = 0; s[i] != '.'; i++) {
+            if(s[i] == '(' || s[i] == '[')
+                brackets.push(s[i]);
 
-            if (s[i] == ')') {
-                if (!brackets.empty() && brackets.top() == '(') {
+            if(s[i] == ')') {
+                if(!brackets.empty() && brackets.top() == '(') {
                     brackets.pop();
                 } else {
                     flag = false;
                 }
             }
 
-            if (s[i] == ']') {
-                if (!brackets.empty() && brackets.top() == '[') {
+            if(s[i] == ']') {
+                if(!brackets.empty() && brackets.top() == '[') {
                     brackets.pop();
                 } else {
                     flag = false;
                 }
             }
         }
-        if (!brackets.empty()) flag = false;
+        if(!brackets.empty())
+            flag = false;
 
-        if (flag)
+        if(flag)
             cout << "yes\n";
         else
             cout << "no\n";

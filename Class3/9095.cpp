@@ -9,8 +9,8 @@ int main() {
     cout.tie(NULL);
 
     vector<int> sumation123(12);
-    for (int i = 1; i < 12; i++) {
-        switch (i) {
+    for(int i = 1; i < 12; i++) {
+        switch(i) {
         case 1:
             sumation123[i] = 1;
             break;
@@ -29,7 +29,7 @@ int main() {
 
     int t;
     cin >> t;
-    for (int i = 0; i < t; i++) {
+    for(int i = 0; i < t; i++) {
         int n;
         cin >> n;
         cout << sumation123[n] << '\n';

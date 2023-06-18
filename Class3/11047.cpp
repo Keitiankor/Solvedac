@@ -27,19 +27,20 @@ int main() {
 
     int count = 0;
 
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         int t;
         cin >> t;
         coins.push(t);
     }
-    while (!coins.empty()) {
+    while(!coins.empty()) {
         int t = coins.top();
         coins.pop();
         count += k / t;
         k %= t;
     }
 
-    if (k != 0) count++;
+    if(k != 0)
+        count++;
 
     cout << count;
 

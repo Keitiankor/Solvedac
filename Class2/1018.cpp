@@ -14,7 +14,7 @@ int main() {
     int m, n;
     cin >> m >> n;
     vector<string> vmn;
-    for (int i = 0; i < m; i++) {
+    for(int i = 0; i < m; i++) {
         string t;
         cin >> t;
         vmn.push_back(t);
@@ -31,18 +31,21 @@ int diff(vector<string> vmn) {
     int min   = 2500;
     int count = 0;
     char w    = 'W';
-    for (int i = 0; i <= y; i++) {
-        for (int j = 0; j <= x; j++) {
-            for (int ii = 0; ii < 8; ii++) {
-                for (int jj = 0; jj < 8; jj++) {
-                    if (vmn[ii + i][jj + j] != w) count++;
+    for(int i = 0; i <= y; i++) {
+        for(int j = 0; j <= x; j++) {
+            for(int ii = 0; ii < 8; ii++) {
+                for(int jj = 0; jj < 8; jj++) {
+                    if(vmn[ii + i][jj + j] != w)
+                        count++;
                     w = w == 'W' ? 'B' : 'W';
                 }
                 w = w == 'W' ? 'B' : 'W';
             }
 
-            if (count > 32) count = 64 - count;
-            if (count < min) min = count;
+            if(count > 32)
+                count = 64 - count;
+            if(count < min)
+                min = count;
             count = 0;
         }
     }

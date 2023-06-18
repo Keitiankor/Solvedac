@@ -9,8 +9,8 @@ int main() {
     cout.tie(NULL);
 
     vector<int> tiling(1001);
-    for (int i = 1; i < 1001; i++) {
-        switch (i) {
+    for(int i = 1; i < 1001; i++) {
+        switch(i) {
         case 1:
             tiling[i] = 1;
             break;

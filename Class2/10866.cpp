@@ -33,10 +33,10 @@ int main() {
     int line;
     cin >> line;
 
-    for (int i = 0; i < line; i++) {
+    for(int i = 0; i < line; i++) {
         string s;
         cin >> s;
-        switch (m[s]) {
+        switch(m[s]) {
         case PUSH_BACK:
         case PUSH_FRONT:
             int temp;
@@ -53,30 +53,30 @@ int main() {
 }
 
 void command(string s) {
-    switch (m[s]) {
+    switch(m[s]) {
     case SIZE:
         cout << d.size() << '\n';
         break;
     case EMPTY:
-        if (d.empty())
+        if(d.empty())
             cout << 1 << '\n';
         else
             cout << 0 << '\n';
         break;
     case FRONT:
-        if (d.empty())
+        if(d.empty())
             cout << -1 << '\n';
         else
             cout << d.front() << '\n';
         break;
     case BACK:
-        if (d.empty())
+        if(d.empty())
             cout << -1 << '\n';
         else
             cout << d.back() << '\n';
         break;
     case POP_FRONT:
-        if (d.empty())
+        if(d.empty())
             cout << -1 << '\n';
         else {
             cout << d.front() << '\n';
@@ -84,7 +84,7 @@ void command(string s) {
         }
         break;
     case POP_BACK:
-        if (d.empty())
+        if(d.empty())
             cout << -1 << '\n';
         else {
             cout << d.back() << '\n';
@@ -95,7 +95,7 @@ void command(string s) {
 }
 
 void command(string s, int i) {
-    switch (m[s]) {
+    switch(m[s]) {
     case PUSH_FRONT:
         d.push_front(i);
         break;

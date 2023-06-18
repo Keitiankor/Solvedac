@@ -15,7 +15,7 @@ int main() {
     int year;
     string name;
     vector<tuple<int, int, string>> pr;
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         cin >> year >> name;
         pr.push_back(make_tuple(i + 1, year, name));
     }
@@ -26,7 +26,7 @@ int main() {
                                           false;
     });
 
-    for (tuple<int, int, string> i : pr)
+    for(tuple<int, int, string> i : pr)
         cout << get<1>(i) << " " << get<2>(i) << '\n';
 
     return 0;

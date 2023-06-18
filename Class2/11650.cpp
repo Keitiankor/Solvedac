@@ -9,7 +9,7 @@ int main() {
     int x, y, n;
     vector<pair<int, int>> point;
     cin >> n;
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         cin >> x >> y;
         point.push_back(make_pair(x, y));
     }
@@ -18,7 +18,7 @@ int main() {
         return p1.first == p2.first ? (p1.second < p2.second ? true : false) : (p1.first < p2.first ? true : false);
     });
 
-    for (auto i : point) {
+    for(auto i : point) {
         cout << i.first << " " << i.second << '\n';
     }
     return 0;

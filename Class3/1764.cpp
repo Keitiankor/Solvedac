@@ -14,26 +14,26 @@ int main() {
 
     int n, m;
     cin >> n >> m;
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         string s;
         cin >> s;
         nseen.insert(s);
     }
-    for (int i = 0; i < m; i++) {
+    for(int i = 0; i < m; i++) {
         string s;
         cin >> s;
         nlisten.insert(s);
     }
     int count = 0;
-    for (auto i : nlisten) {
-        if (nseen.find(i) != nseen.end()) {
+    for(auto i : nlisten) {
+        if(nseen.find(i) != nseen.end()) {
             count++;
             nsl.insert(i);
         }
     }
 
     cout << count << '\n';
-    for (auto i : nsl)
+    for(auto i : nsl)
         cout << i << '\n';
 
     return 0;

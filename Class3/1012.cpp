@@ -12,7 +12,7 @@ int main() {
 
     int t;
     cin >> t;
-    for (int i = 0; i < t; i++) {
+    for(int i = 0; i < t; i++) {
         int m, n, k;
         cin >> m >> n >> k;
         int bug = 0;
@@ -25,27 +25,26 @@ int main() {
         vector<vector<bool>> field(m, vector<bool>(n, false));
         vector<pair<int, int>> cabbage;
         queue<pair<int, int>> q;
-        for (int j = 0; j < k; j++) {
+        for(int j = 0; j < k; j++) {
             int x, y;
             cin >> x >> y;
             cabbage.push_back(make_pair(x, y));
         }
 
-        for (auto j : cabbage) {
-            if (!field[j.first][j.second]) {
+        for(auto j : cabbage) {
+            if(!field[j.first][j.second]) {
                 q.push(j);
                 bug++;
                 field[j.first][j.second] = true;
             }
-            while (!q.empty()) {
+            while(!q.empty()) {
                 pair<int, int> point = q.front();
                 q.pop();
                 field[point.first][point.second] = true;
-                for (auto k : pm) {
+                for(auto k : pm) {
                     pair<int, int> ppmm = make_pair(point.first + k.first, point.second + k.second);
                     pair<int, int> mmpp = make_pair(ppmm.second, ppmm.first);
-                    if (find(cabbage.begin(), cabbage.end(), ppmm) != cabbage.end() &&
-                        !field[ppmm.first][ppmm.second]) {
+                    if(find(cabbage.begin(), cabbage.end(), ppmm) != cabbage.end() && !field[ppmm.first][ppmm.second]) {
                         q.push(ppmm);
                         field[ppmm.first][ppmm.second] = true;
                     }

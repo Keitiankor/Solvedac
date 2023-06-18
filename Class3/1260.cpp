@@ -30,7 +30,7 @@ int main() {
     vector<pair<int, int>> graph;
     bool *visited = new bool[n + 1];
     fill_n(visited, n + 1, false);
-    for (int i = 0; i < m; i++) {
+    for(int i = 0; i < m; i++) {
         int x, y;
         cin >> x >> y;
         graph.push_back(make_pair(x, y));
@@ -39,21 +39,24 @@ int main() {
     stack<int> dfs;
     vector<int> ans;
     dfs.push(v);
-    while (!dfs.empty()) {
+    while(!dfs.empty()) {
         int next = dfs.top();
         dfs.pop();
-        if (find(ans.begin(), ans.end(), next) == ans.end()) ans.push_back(next);
+        if(find(ans.begin(), ans.end(), next) == ans.end())
+            ans.push_back(next);
         visited[next] = true;
         set<int> temp;
-        for (pair<int, int> i : graph) {
-            if (i.first == next && !visited[i.second]) temp.insert(i.second);
-            if (i.second == next && !visited[i.first]) temp.insert(i.first);
+        for(pair<int, int> i : graph) {
+            if(i.first == next && !visited[i.second])
+                temp.insert(i.second);
+            if(i.second == next && !visited[i.first])
+                temp.insert(i.first);
         }
-        for (auto iter = temp.rbegin(); iter != temp.rend(); iter++)
+        for(auto iter = temp.rbegin(); iter != temp.rend(); iter++)
             dfs.push(*iter);
     }
 
-    for (auto i : ans)
+    for(auto i : ans)
         cout << i << ' ';
     ans.clear();
 
@@ -65,25 +68,26 @@ int main() {
     visited[v] = true;
     ans.clear();
 
-    while (!bfs.empty()) {
+    while(!bfs.empty()) {
         int next = bfs.front();
         bfs.pop();
-        if (find(ans.begin(), ans.end(), next) == ans.end()) ans.push_back(next);
+        if(find(ans.begin(), ans.end(), next) == ans.end())
+            ans.push_back(next);
         set<int> temp;
-        for (pair<int, int> i : graph) {
-            if (i.first == next && !visited[i.second]) {
+        for(pair<int, int> i : graph) {
+            if(i.first == next && !visited[i.second]) {
                 temp.insert(i.second);
                 visited[i.second] = true;
             }
-            if (i.second == next && !visited[i.first]) {
+            if(i.second == next && !visited[i.first]) {
                 temp.insert(i.first);
                 visited[i.first] = true;
             }
         }
-        for (auto i : temp)
+        for(auto i : temp)
             bfs.push(i);
     }
-    for (auto i : ans)
+    for(auto i : ans)
         cout << i << ' ';
 
     return 0;

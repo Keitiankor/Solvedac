@@ -28,8 +28,8 @@ int main() {
     int tc;
     cin >> tc;
 
-    for (int i = 0; i < 100; i++) {
-        switch (i) {
+    for(int i = 0; i < 100; i++) {
+        switch(i) {
         case 0:
             dp[i] = 1;
             break;
@@ -50,7 +50,7 @@ int main() {
         }
     }
 
-    for (int i = 0; i < tc; i++) {
+    for(int i = 0; i < tc; i++) {
         int t;
         cin >> t;
         cout << dp[t - 1] << '\n';

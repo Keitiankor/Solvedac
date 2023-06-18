@@ -13,7 +13,7 @@ int main() {
     bool *y = new bool[n];
     bool *x = new bool[n];
 
-    for (int i = 1; i <= n; i++) {
+    for(int i = 1; i <= n; i++) {
         int t    = pow(2, n - i);
         y[n - i] = r / t == 1;
         x[n - i] = c / t == 1;
@@ -24,9 +24,11 @@ int main() {
     int sumy = y[0] * 2;
     int sumx = x[0];
 
-    for (int i = 1; i < n; i++) {
-        if (y[i]) sumy += 2 * pow(4, i);
-        if (x[i]) sumx += pow(4, i);
+    for(int i = 1; i < n; i++) {
+        if(y[i])
+            sumy += 2 * pow(4, i);
+        if(x[i])
+            sumx += pow(4, i);
     }
 
     int xy = sumy + sumx;

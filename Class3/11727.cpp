@@ -25,8 +25,8 @@ int main() {
 #endif
 
     int tiling[1000];
-    for (int i = 0; i < 1000; i++) {
-        switch (i) {
+    for(int i = 0; i < 1000; i++) {
+        switch(i) {
         case 0:
             tiling[i] = 1;
             break;

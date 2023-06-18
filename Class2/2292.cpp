@@ -12,7 +12,7 @@ int main() {
     int depth     = 0;
     cin >> n;
     n -= 1;
-    while (n > hexaCount) {
+    while(n > hexaCount) {
         n -= hexaCount;
         depth++;
         hexaCount += 6;
